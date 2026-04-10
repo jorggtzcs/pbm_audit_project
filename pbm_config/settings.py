@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'auditor',
 ]
 
 MIDDLEWARE = [
@@ -75,7 +76,7 @@ WSGI_APPLICATION = 'pbm_config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pbm_audit_project',
+        'NAME': 'pbm_audit_db',
         'USER': 'datauser',
         'PASSWORD': 'StrongPassword123',
         'HOST': 'localhost',
