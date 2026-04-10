@@ -8,6 +8,9 @@ class Pharmacy(models.Model):
     state_license = models.CharField(max_length=50)
     email = models.EmailField()
 
+    class Meta:
+        verbose_name_plural = "Pharmacies"
+
     def __str__(self):
         return self.name
 
@@ -27,3 +30,11 @@ class Claim(models.Model):
     def __str__(self):
         return f"Claim {self.rx_number} - {self.drug_name}"
 
+    def check_for_audit(self):
+        """
+        Flag claim if the paid amount is significantly
+        higher than the billed amount.
+        """
+        if self.paid_amount > self.billed_amount:
+            return "Flagged: Overpayment"
+        return "Clean"
