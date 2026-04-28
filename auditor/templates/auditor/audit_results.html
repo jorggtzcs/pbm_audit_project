@@ -1,0 +1,14 @@
+<h2>PBM Audit Status</h2>
+
+{% if messages %}
+    {% for message in messages %}
+        <p style="color: green;">{{ message }}</p>
+    {% endfor %}
+{% endif %}
+
+<a href="/admin/auditor/claim/">View Results in Admin</a>
+<br><br>
+<form action="{% url 'run_audit' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Run Audit Again</button>
+</form>

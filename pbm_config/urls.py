@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from auditor import views
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('dashboard/', views.audit_dashboard, name='audit_dashboard'),
+
 ]

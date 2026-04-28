@@ -27,6 +27,9 @@ class Claim(models.Model):
     # logic for the audit
     is_audited = models.BooleanField(default=False)
 
+    is_flagged=models.BooleanField(default=False)
+    audit_notes= models.TextField(blank=True, null=True)
+
     def __str__(self):
         return f"Claim {self.rx_number} - {self.drug_name}"
 
