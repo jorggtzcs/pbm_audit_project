@@ -1,0 +1,4 @@
+Automated Data Ingestion: Custom Django management command to import thousands of claims (NHIS format) from CSV into MySQL efficiently.
+Audit Engine: Backend logic that identifies "Paid vs. Billed" discrepancies and flags potential fraud or billing errors.
+Analytical Dashboard: A high-level summary view using Bootstrap cards to display Total Claims, Flagged Errors, and Total Potential Recovery.
+Relational Database: Robust MySQL backend to handle data integrity for 4,000+ claim records.
